@@ -8,12 +8,12 @@ function makeGreeting (language) {
 
         if (language === 'english') {
 
-            console.log('Gday mate, ' + firstname + ' ' + lastname);
+            console.log('Hello, ' + firstname + ' ' + lastname);
         }
 
         if (language === 'spanish') {
 
-            console.log('Hola senior ' + firstname + ' ' + lastname + ', quiero tacos?');
+            console.log('Hola senior ' + firstname + ' ' + lastname + ', quiere tacos?');
         }
 
         if (language === 'finnish') {
@@ -29,3 +29,14 @@ function makeGreeting (language) {
 var greetEnglish = makeGreeting('english');
 var greetSpanish = makeGreeting('spanish');
 var greetFinnish = makeGreeting('finnish');
+
+//you can invoke these in two ways, either directly at the time of setting it to a variable or after
+
+var sayHiEnglish = makeGreeting('english')('John', 'Doe');
+var sayHiSpanish = makeGreeting('spanish')('Pablo', 'Escobar');
+var sayHiFinnish = makeGreeting('finnish')('Edvard', 'Karvinen');
+
+//here we invoke after
+greetEnglish('John', 'Doe');
+greetSpanish('Pablo', 'Escobar');
+greetFinnish('Edvard', 'Karvinen');
